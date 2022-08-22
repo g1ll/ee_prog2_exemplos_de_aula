@@ -49,7 +49,7 @@ void ListaEncadeada<T>::imprime() { // Metodo para imprimir, na saida padrao, to
   Elemento<T>* temp = cabeca;
   do
     cout << temp->valor << endl;
-  while (temp = temp->prox); // E uma atribuicao e uma comparacao
+  while(temp = temp->prox); // E uma atribuicao e uma comparacao
 }
 
 template<typename T>
