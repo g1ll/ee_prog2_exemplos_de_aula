@@ -1,2 +1,2 @@
-## ee_prog2_exemplos_de_aula
+## Programação de Computadores II - EE IFSUL
 Exemplos utilizados durante as aulas de Programação II EE-IFSUL.
