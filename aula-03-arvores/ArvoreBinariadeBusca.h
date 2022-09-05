@@ -22,9 +22,9 @@ public:
 	void inserir(T x);
 	void remover(T x);
 	void imprimeInOrden(No<T> *no);
-	void imprimePreOrden(No<T> *no);
-	void imprimePosOrden(No<T> *no);
-	void imprimeNivel(No<T> *no);
+	void imprimePreOrden(No<T> *no); //Implementar
+	void imprimePosOrden(No<T> *no); //Implementar
+	void imprimeNivel(No<T> *no); //Implementar
 	void imprime(No<T> *no); //Imprimir arvore no formato identacao
 	No<T>* busca(T x,No<T>*);
 };
