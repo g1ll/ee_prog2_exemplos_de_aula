@@ -58,39 +58,12 @@ void ArvoreBinariadeBusca<T>::imprimeInOrden(No<T> *no){
 
 template<typename T>
 void ArvoreBinariadeBusca<T>::imprimePreOrden(No<T> *no){
-	if(!no)	no = raiz;
-	
-	if(!raiz) 
-		cout << "Arvore vazia!";
-	else{
-		cout << " " << no->valor;
-
-		if(no->esq) 
-			imprimePreOrden(no->esq);
-		
-		if(no->dir) 
-			imprimePreOrden(no->dir);
-		
-		if(no == raiz) cout << endl;
-	}
+	//Implementar
 }
 
 template<typename T>
 void ArvoreBinariadeBusca<T>::imprimePosOrden(No<T> *no){
-	if(!no)	no = raiz;
-	
-	if(!raiz) 
-		cout << "Arvore vazia!";
-	else{
-		if(no->esq) 
-			imprimePosOrden(no->esq);
-		if(no->dir) 
-			imprimePosOrden(no->dir);
-
-		cout << " " << no->valor;
-		
-		if(no == raiz) cout << endl;
-	}
+	//Implementar
 }
 
 template<typename T>
