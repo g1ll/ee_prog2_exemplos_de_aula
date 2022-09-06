@@ -8,7 +8,8 @@ ArvoreBinariadeBusca<T>::ArvoreBinariadeBusca(){
 template<typename T>
 void ArvoreBinariadeBusca<T>::inserir(T x){
 	No<T> *novo = new No<T>(x);
-	if(!raiz)
+	// if(!raiz)
+	if(raiz==NULL)
 		raiz = novo;
 	else{
 		No<T> *atual = raiz;
@@ -19,6 +20,7 @@ void ArvoreBinariadeBusca<T>::inserir(T x){
 					atual = atual->esq;
 				else {
 					atual->esq = novo;
+					cout << "inseriu: "<<novo->valor<<endl;
 					atual = nullptr;
 				}
 			}else if (novo->valor>atual->valor){
@@ -26,6 +28,7 @@ void ArvoreBinariadeBusca<T>::inserir(T x){
 					atual = atual->dir;
 				else{
 					atual->dir = novo;
+					cout << "inseriu: "<<novo->valor<<endl;
 					atual = nullptr;
 				}
 			}else{
@@ -33,7 +36,6 @@ void ArvoreBinariadeBusca<T>::inserir(T x){
 				atual = nullptr;
 			}
 		}
-		cout << "inseriu: "<<novo->valor<<endl;
 	}
 }
 
@@ -68,11 +70,14 @@ void ArvoreBinariadeBusca<T>::imprimePosOrden(No<T> *no){
 
 template<typename T>
 No<T>* ArvoreBinariadeBusca<T>::busca(T x, No<T> *no){
-	if(!no)	no = raiz;
+	if(!no) no = raiz;
 	if(!raiz) return NULL;
 	else{
 		if(x==no->valor) return no;
-		else if(x<no->valor) return no->esq?busca(x, no->esq):NULL;
+		else if(x<no->valor) 
+				if(no->esq)
+					return busca(x, no->esq);
+				else return NULL;  //var = teste?verdade : falso;
 		else if(x>no->valor) return no->dir?busca(x, no->dir):NULL;
 		else return NULL;
 	}
