@@ -23,6 +23,13 @@ int main()
 	int n;
 	cout << "Buscar um numero: ";
 	cin >> n;
+	//valida erro de entrada de dados (tipo)
+	while(cin.fail()){ //testa erro de entrada
+		cin.clear(); //limpa estado do CIN (bits de erros)
+    	cin.ignore(1000,'\n'); //ignora 1000 caracteres da entrada anterior ou ate encontrar \n
+    	cout << "\nEntrada invalida <n inteiro>:" << endl; //solicita nova entrada
+    	cin >> n;
+  }
 
 	No<int> *no = btree.busca(n,NULL);
 	if (no)
