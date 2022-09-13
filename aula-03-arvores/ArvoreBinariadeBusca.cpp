@@ -60,7 +60,21 @@ void ArvoreBinariadeBusca<T>::imprimeInOrden(No<T> *no){
 
 template<typename T>
 void ArvoreBinariadeBusca<T>::imprimePreOrden(No<T> *no){
-	//Implementar
+	if(!no)	no = raiz;
+	
+	if(!raiz) 
+		cout << "Arvore vazia!";
+	else{
+		cout << " " << no->valor;
+
+		if(no->esq) 
+			imprimePreOrden(no->esq);
+		
+		if(no->dir) 
+			imprimePreOrden(no->dir);
+		
+		if(no == raiz) cout << endl;
+	}
 }
 
 template<typename T>
@@ -100,7 +114,7 @@ void ArvoreBinariadeBusca<T>::removerBusca(T x, No<T> *&atual){
 template<typename T>
 void ArvoreBinariadeBusca<T>::deletarNo(No<T> *&atual){
 	No<T> * temp = atual;
-	if(!atual->esq){
+	if(atual->esq==NULL){
 		atual = atual->dir;
 		delete temp;
 	}else if(!atual->dir){
