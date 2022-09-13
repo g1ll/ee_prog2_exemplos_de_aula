@@ -1,4 +1,5 @@
 #include "Tasks.cpp"
+#include "Menu.cpp"
 
 using namespace std;
 
@@ -11,8 +12,9 @@ int main()
 
     string tarefa;
     Tasks tarefas;
+    Menu menu;
     string nomeSobrenome;
-
+    
     char_set();
 
     cout << "Informe o seu Nome e Sobrenome:" << endl;
@@ -31,16 +33,8 @@ int main()
         }
 
         cout << "\n\n1 - Criar Tarefa\n2 - Concluir Tarefa\n3 - Sair";
-
-        cout << "\nEscolha uma das opcoes: ";
-        cin >> opt;
-        while (cin.fail() || opt < 1 || opt > 3)
-        {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout << "Opções invalida! Tente novamente 1-3: ";
-            cin >> opt;
-        }
+        
+        opt = menu.entradaValor("Escolha uma das opcoes: ",1,3);
 
         switch (opt)
         {
