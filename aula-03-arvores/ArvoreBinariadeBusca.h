@@ -11,11 +11,13 @@ class ArvoreBinariadeBusca
 {
 private:
 	No<T> *raiz;
+	
+	void deletarNo(No<T> *&atual, bool ant); //implementar antecessor
+	No<T>* obterAntecessor(No<T> *atual); //implementar
+	
 	void removerBusca(T x, No<T> *&atual);
 	void deletarNo(No<T> *&atual);
-	void deletarNo(No<T> *&atual, bool ant); //implementar antecessor
 	No<T>* obterSucessor(No<T> *atual);
-	No<T>* obterAntecessor(No<T> *atual); //implementar
 
 public:
 	ArvoreBinariadeBusca();
