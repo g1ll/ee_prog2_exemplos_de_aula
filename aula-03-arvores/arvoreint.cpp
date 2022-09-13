@@ -29,7 +29,7 @@ int main()
     	cin.ignore(1000,'\n'); //ignora 1000 caracteres da entrada anterior ou ate encontrar \n
     	cout << "\nEntrada invalida <n inteiro>:" << endl; //solicita nova entrada
     	cin >> n;
-  }
+  	}
 
 	No<int> *no = btree.busca(n,NULL);
 	if (no)
@@ -44,5 +44,8 @@ int main()
 	
 	cout << "Imprime em ordem: " << endl;
 	btree.imprimeInOrden(nullptr);
+
+	cout << "Imprime em pre-ordem: " << endl;
+	btree.imprimePreOrden(nullptr);
 
 }
