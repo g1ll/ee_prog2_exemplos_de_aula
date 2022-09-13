@@ -117,7 +117,7 @@ void ArvoreBinariadeBusca<T>::deletarNo(No<T> *&atual){
 	if(atual->esq==NULL){
 		atual = atual->dir;
 		delete temp;
-	}else if(!atual->dir){
+	}else if(!atual->dir){ //atual->dir==NULL
 		atual = atual->esq;
 		delete temp;
 	}else{
@@ -133,4 +133,9 @@ No<T>* ArvoreBinariadeBusca<T>::obterSucessor(No<T> *temp){
 	while(temp->esq)
 		temp = temp->esq;
 	return temp;
+}
+
+template<typename T>
+No<T>* obterAntecessor(No<T> *atual){
+		
 }
