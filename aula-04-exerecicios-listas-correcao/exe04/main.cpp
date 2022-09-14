@@ -10,7 +10,7 @@ int main()
 {
     int opt;
 
-    string tarefa;
+    string descricao;
     Tasks tarefas;
     Menu menu;
     string nomeSobrenome;
@@ -22,7 +22,7 @@ int main()
 
     do
     {
-        clear();
+        system("cls");
         cout << "Tarefas de " << nomeSobrenome << endl;
 
         if (!tarefas.vazio())
@@ -34,23 +34,23 @@ int main()
 
         cout << "\n\n1 - Criar Tarefa\n2 - Concluir Tarefa\n3 - Sair";
         
-        opt = menu.entradaValor("Escolha uma das opcoes: ",1,3);
+        menu.entradaValor("Escolha uma das opcoes: ",1,3,opt);
 
         switch (opt)
         {
         case 1:
             cout << "\nDescricao da tarefa: ";
             cin.ignore();
-            getline(cin, tarefa);
-            cout << tarefa;
-            tarefas.inserir(tarefa);
+            getline(cin, descricao);
+            cout << descricao;
+            tarefas.inserir(descricao);
             cout << "\nTarefa criada!\n";
             break;
         case 2:
             if (!tarefas.vazio())
             {
-                tarefa = tarefas.obter();
-                cout << "Tarefa " << tarefa << " concluida!" << endl;
+                descricao = tarefas.obter();
+                cout << "Tarefa " << descricao << " concluida!" << endl;
                 cin.get();
             }
             else
@@ -61,7 +61,7 @@ int main()
             break;
         }
 
-        if (opt != 3)
+        if (opt != 3)  
         {
             cout << "Pressione <enter> para continuar!";
             cin.get();
