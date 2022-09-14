@@ -8,5 +8,6 @@ using namespace std;
 class Menu{
     public:
     int entradaValor(string message,int start, int end);
+    void entradaValor(string message,int start, int end,int &opt);
 };
 #endif
