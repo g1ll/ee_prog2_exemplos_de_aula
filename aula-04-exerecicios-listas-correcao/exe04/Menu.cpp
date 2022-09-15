@@ -19,5 +19,5 @@ int Menu::entradaValor(string message, int start, int end)
 
 void Menu::entradaValor(string message, int start, int end, int &opt)
 {
-    opt = entradaValor(message,start,end,opt)
+    opt = entradaValor(message,start,end);
 }
