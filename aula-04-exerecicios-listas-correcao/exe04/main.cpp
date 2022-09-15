@@ -87,27 +87,3 @@ void clear(){
         system("clear");
     #endif
 }
-
-
-//chamada eng.
-// guilherme gauterio
-// matheus bueno
-// flavio garcia
-// leandro oliveira
-// augusto
-// leandro link
-// vinicius.
-
-
-//turma das 19
-//Leronardo kurz
-//Vitor
-//Kevin
-//Gabriel Lemos
-//Gabriel
-//Pedro
-//Iuri
-//Adelino
-//Jhon
-//Wesley 
-//Gabriel Ferreira
